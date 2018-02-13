@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     return knex('questions').insert([
       {
         questionText: 'What accounts for jaw relation to the temporomandibular joint?',
-        imgSrc: 'src: "http://static5.uk.businessinsider.com/image/590b867ddd08959a7a8b4abf-1190-625/the-best-selling-teeth-whitener-is-on-amazon-uk-and-it-really-works.jpg" alt:"teeth"'
+        imgSrc: 'src: "http://static5.uk.businessinsider.com/image/590b867ddd08959a7a8b4abf-1190-625/the-best-selling-teeth-whitener-is-on-amazon-uk-and-it-really-works.jpg" alt:"teeth"',
         correctAnswer: 'Facebow',
         incorrectAnswer1: 'Wax Bite',
         incorrectAnswer2: 'Stone Models',
@@ -66,7 +66,7 @@ exports.seed = function(knex, Promise) {
         incorrectAnswer1: '7-10 and 23-26',
         incorrectAnswer2: '6, 11, 22, and 27',
         incorrectAnswer3: '4-5, 12-13, 20-21, 28 and 29',
-        id: 7,
+        id: 8,
       },
       {
         questionText: 'Where do you start numbering teeth?',
@@ -74,10 +74,10 @@ exports.seed = function(knex, Promise) {
         incorrectAnswer1: 'Patients lower right',
         incorrectAnswer2: 'Patients lower left',
         incorrectAnswer3: 'Patients upper left',
-        id: 8,
+        id: 9,
       },
     ]);
   }).then(function () {
-          return knex.raw('alter sequence questions_id_seq restart with 9')
+          return knex.raw('alter sequence questions_id_seq restart with 10')
         })
 };
