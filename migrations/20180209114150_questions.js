@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('questions', function (table){
     table.increments('id').primary()
     table.varchar('questionText')
+    table.varchar('imgSrc')
     table.text('correctAnswer')
     table.text('incorrectAnswer1')
     table.text('incorrectAnswer2')
