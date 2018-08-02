@@ -5,7 +5,8 @@ exports.seed = function(knex, Promise) {
     return knex('questions').insert([
       {
         questionText: 'What accounts for jaw relation to the temporomandibular joint?',
-        imgSrc: 'src: "http://static5.uk.businessinsider.com/image/590b867ddd08959a7a8b4abf-1190-625/the-best-selling-teeth-whitener-is-on-amazon-uk-and-it-really-works.jpg" alt:"teeth"',
+        imgSrc: "http://static5.uk.businessinsider.com/image/590b867ddd08959a7a8b4abf-1190-625/the-best-selling-teeth-whitener-is-on-amazon-uk-and-it-really-works.jpg",
+        imgAlt: "teeth",
         correctAnswer: 'Facebow',
         incorrectAnswer1: 'Wax Bite',
         incorrectAnswer2: 'Stone Models',

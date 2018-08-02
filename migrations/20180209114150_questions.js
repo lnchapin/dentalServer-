@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments('id').primary()
     table.varchar('questionText')
     table.varchar('imgSrc')
+    table.text('imgAlt')
     table.text('correctAnswer')
     table.text('incorrectAnswer1')
     table.text('incorrectAnswer2')
