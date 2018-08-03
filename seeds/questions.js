@@ -5,8 +5,6 @@ exports.seed = function(knex, Promise) {
     return knex('questions').insert([
       {
         questionText: 'What accounts for jaw relation to the temporomandibular joint?',
-        imgSrc: "http://static5.uk.businessinsider.com/image/590b867ddd08959a7a8b4abf-1190-625/the-best-selling-teeth-whitener-is-on-amazon-uk-and-it-really-works.jpg",
-        imgAlt: "teeth",
         correctAnswer: 'Facebow',
         incorrectAnswer1: 'Wax Bite',
         incorrectAnswer2: 'Stone Models',
@@ -15,6 +13,8 @@ exports.seed = function(knex, Promise) {
       },
       {
         questionText: 'What class represents a normal jaw relation?',
+        imgSrc: "http://www.nonextractionorthodontics.info/wp-content/uploads/2016/11/4-Normal-jaw-2.jpg",
+        imgAlt: "Normal jaw relation",
         correctAnswer: '1',
         incorrectAnswer1: '2',
         incorrectAnswer2: '3',
@@ -23,6 +23,8 @@ exports.seed = function(knex, Promise) {
       },
       {
         questionText: 'What class represents a retrognathic jaw relation?',
+        imgSrc: "https://www.angelorthodontics.co.uk/wp-content/uploads/2016/08/common-classii.jpg",
+        imgAlt: "Retrognathic jaw relation, also known as an an over bite",
         correctAnswer: '2',
         incorrectAnswer1: '1',
         incorrectAnswer2: '3',
@@ -31,6 +33,8 @@ exports.seed = function(knex, Promise) {
       },
       {
         questionText: 'What class represents a pronathic jaw relation?',
+        imgSrc: "http://www.amren.com/ar/2009/01/09b-Prognath.jpg",
+        imgAlt: "Prognathic jaw relation, also known as an an under bite",
         correctAnswer: '3',
         incorrectAnswer1: '2',
         incorrectAnswer2: '1',
@@ -77,8 +81,16 @@ exports.seed = function(knex, Promise) {
         incorrectAnswer3: 'Patients upper left',
         id: 9,
       },
+      {
+      questionText: 'What is the purpose of a reline?',
+      correctAnswer: 'To improve fit',
+      incorrectAnswer1: 'To reposition teeth',
+      incorrectAnswer2: 'To improve aesthetics',
+      incorrectAnswer3: 'To change gum color',
+      id: 10,
+    }
     ]);
   }).then(function () {
-          return knex.raw('alter sequence questions_id_seq restart with 10')
+          return knex.raw('alter sequence questions_id_seq restart with 11')
         })
 };
